@@ -3,9 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script src="node_modules/angular/angular.js" charset="utf-8"></script>
+    <script src="js/app.js"></script>
+    <script src="js/musings.controller.js"></script>
     <title>Musings</title>
   </head>
-  <body>
+  <body ng-app="musingsApp">
+    <div class="container" ng-controler="musingsController as vm">
+      <div class="musings" ng-repeat="muse in vm.musings">
+        <p>{{muse.title}}</p>
+      </div>
+    </div>
 
   </body>
 </html>
